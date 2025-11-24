@@ -170,7 +170,7 @@ Launch `HomeProductsIncRunner.java` to open the main menu with navigation option
 
 ## Authors
 
-**Ethan C and Aarav S**  
+**Aarav S and Ethan C**  
 Version 1.0.0  
 Contact: aaravsonthalia@gmail.com, echan2025@pingry.org
 
