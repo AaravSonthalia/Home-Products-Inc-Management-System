@@ -81,22 +81,6 @@ Launch `HomeProductsIncRunner.java` to open the main menu with navigation option
 - Automatic calculations for order totals and customer credit
 - Hierarchical sales rep management with manager relationships
 
-## Troubleshooting
-
-**Connection Error**
-- Verify credentials in `DatabaseConfig.java`
-- Ensure MySQL server is running
-- Check database exists
-
-**Foreign Key Error**
-- Ensure referenced records exist first
-- Load data in order: Warehouse → SalesRep → Customer → Order → Payment
-
-**Validation Errors**
-- Fill all required fields (marked with *)
-- Check data formats match validation rules
-- Verify referenced IDs exist in database
-
 ## Authors
 
 **Aarav S and Ethan C**  
