@@ -27,40 +27,6 @@ Seven core tables with relational integrity:
 - **tblPayment** - Payment records (links to Customer and Order)
 - **tblProductsOrder** - Order line items (many-to-many between Order and Product)
 
-## Installation
-
-### Prerequisites
-- Java Development Kit (JDK) 8+
-- MySQL Server 5.7+
-- MySQL Connector/J (JDBC Driver)
-
-### Setup Steps
-
-1. **Create and populate database**:
-```sql
-source HomeProductsDatabase.sql
-USE HomeProductsIncSmall;
-source HomeProductsTables.sql
-source HomeProductsForeignKeys.sql
-```
-
-2. **Configure database connection** in `DatabaseConfig.java`:
-```java
-private static final String DB_URL = "jdbc:mysql://localhost:3306/HomeProductsIncSmall";
-private static final String DB_USERNAME = "root";
-private static final String DB_PASSWORD = "your_password";
-```
-
-3. **Import sample data** (optional) from provided Excel file
-
-4. **Add MySQL Connector/J** to your project's build path
-
-5. **Run the application**:
-```bash
-javac *.java
-java HomeProductsIncRunner
-```
-
 ## Usage
 
 Launch `HomeProductsIncRunner.java` to open the main menu with navigation options for all features.
@@ -97,43 +63,6 @@ Launch `HomeProductsIncRunner.java` to open the main menu with navigation option
 - **Dates**: Order/payment dates must be current; shipping/card expiration cannot be past
 - **IDs**: All referenced IDs must exist in database
 - **Amounts**: Positive values only for prices, credit, and payments
-
-## Project Structure
-
-```
-├── Database Scripts/
-│   ├── HomeProductsDatabase.sql
-│   ├── HomeProductsTables.sql
-│   └── HomeProductsForeignKeys.sql
-│
-├── Model Classes/
-│   ├── Customer.java
-│   ├── Order.java
-│   ├── Payment.java
-│   ├── Product.java
-│   └── SalesRep.java
-│
-├── Service Classes/
-│   ├── CustomerService.java
-│   ├── OrderService.java
-│   ├── PaymentService.java
-│   ├── ProductService.java
-│   └── SalesRepService.java
-│
-├── Presentation Classes/
-│   ├── MainMenuPresentation.java
-│   ├── CustomerViewPresentation.java
-│   ├── CustomerEditPresentation.java
-│   ├── OrderViewPresentation.java
-│   ├── OrderEditPresentation.java
-│   ├── PaymentPresentation.java
-│   ├── ProductEditPresentation.java
-│   └── SalesRepEditPresentation.java
-│
-└── Configuration/
-    ├── DatabaseConfig.java
-    └── HomeProductsIncRunner.java
-```
 
 ## Technical Details
 
